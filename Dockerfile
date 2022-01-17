@@ -61,9 +61,13 @@ RUN \
     /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
+    
+#Addition by @Grostim    
 RUN   apt-get update && \
       apt-get install -y \
         python3-pip
+RUN python3 -mpip install jupyter
+#End of Addition by @Grostim    
 
 # add local files
 COPY /root /
