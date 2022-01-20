@@ -67,6 +67,9 @@ RUN   apt-get update && \
       apt-get install -y \
         python3-pip
 RUN python3 -mpip install jupyter
+RUN python3 -mpip install flake8
+RUN python3 -mpip install black
+RUN python3 -mpip install beancount
 #End of Addition by @Grostim    
 
 # add local files
